@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Present Perfect — The Perfect Gift Does Exist</title>
-  <meta name="description" content="Premium curated gift baskets from Beverly Hills. Three decades of superior customer service and tailor-made experiences." />
-  <meta property="og:title" content="Present Perfect — The Perfect Gift Does Exist" />
+  <title>Shop — Present Perfect</title>
+  <meta name="description" content="Shop premium curated gift baskets from Beverly Hills. Three decades of superior customer service and tailor-made experiences." />
+  <meta property="og:title" content="Shop — Present Perfect" />
   <meta property="og:description" content="Premium curated gift baskets from Beverly Hills." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -105,6 +105,8 @@
     }
 
     .nav-links a:hover { color: var(--accent); }
+
+    .nav-links a.nav-active { color: var(--accent); }
 
     .nav-cart {
       position: relative;
@@ -837,7 +839,7 @@
       .featured { padding: 4rem 1.25rem; }
       .featured-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 
-      .shop { padding: 4rem 1.25rem; }
+      .shop { padding: 4rem 1.25rem; padding-top: 100px; }
       .shop-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
       .shop-filters { gap: 0.35rem; }
       .filter-btn { padding: 0.4rem 0.85rem; font-size: 0.65rem; }
@@ -879,15 +881,15 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <span class="logo-present">Present Perfect</span>
         <span class="logo-perfect">Beverly Hills</span>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#featured">Featured</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#team">Our People</a></li>
+        <li><a href="index.html#featured">Featured</a></li>
+        <li><a href="shop.html" class="nav-active">Shop</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#team">Our People</a></li>
       </ul>
       <button class="nav-cart" id="cart-toggle" aria-label="Open cart">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
@@ -899,80 +901,23 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <div class="hero-label fade-up">Celebrating Three Decades in Beverly Hills</div>
-      <h1 class="hero-title fade-up">Present <em>Perfect</em></h1>
-      <p class="hero-subtitle fade-up">The perfect gift does exist</p>
-      <a href="shop.html" class="hero-cta fade-up">Shop the Collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    </div>
-  </section>
-
-  <!-- FEATURED -->
-  <section class="featured" id="featured">
+  <!-- SHOP -->
+  <section class="shop" id="shop" style="padding-top: 120px;">
     <div class="section-header">
-      <div class="section-label fade-up">Curated Favorites</div>
-      <h2 class="section-title fade-up">Founder's Picks of 2026</h2>
+      <div class="section-label fade-up">The Collection</div>
+      <h2 class="section-title fade-up">Shop All</h2>
     </div>
-    <div class="featured-grid" id="featured-grid"></div>
-    <div class="view-all-wrap fade-up">
-      <a href="shop.html" class="view-all">View All Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <div class="shop-filters fade-up" id="shop-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="gift-baskets">Gift Baskets</button>
+      <button class="filter-btn" data-filter="chocolate">Chocolate</button>
+      <button class="filter-btn" data-filter="candy">Candy</button>
+      <button class="filter-btn" data-filter="jerky">Jerky</button>
+      <button class="filter-btn" data-filter="sauces">Sauces &amp; Jams</button>
+      <button class="filter-btn" data-filter="snacks">Snacks &amp; Crackers</button>
+      <button class="filter-btn" data-filter="spices">Spices &amp; Oil</button>
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-inner">
-      <div class="about-text-wrap">
-        <div class="section-label fade-up">Who We Are</div>
-        <h2 class="section-title fade-up" style="text-align:left; margin-bottom: 2rem;">Three Decades of <br>Beverly Hills Gifting</h2>
-        <p class="about-text fade-up">A company that has been around for <strong>three decades</strong>, serving Beverly Hills premium gift baskets for the holidays and special occasions throughout the year. Present Perfect delivers <strong>superior customer service</strong>, and tailor-made experiences for each person, at a high level that has earned us distinction in our field. Started by <strong>Barbara Kalmus</strong>, the business has flourished under her children, Perry, Dari and Ori Kalmus. Present Perfect is the best choice to make your present no less than <strong>perfect</strong>.</p>
-      </div>
-      <img class="about-img fade-up" src="about-photo.jpg" alt="The Beverly Hills" loading="lazy" />
-    </div>
-  </section>
-
-  <!-- TEAM -->
-  <section class="team" id="team">
-    <div class="team-inner">
-      <div class="section-header">
-        <div class="section-label fade-up">Perfect People</div>
-        <h2 class="section-title fade-up">Meet the Team</h2>
-      </div>
-      <div class="team-grid">
-        <div class="team-card fade-up">
-          <img class="team-photo" src="barb.jpg" alt="Barbara Kalmus" style="object-position: center 15%;" />
-          <div class="team-name">Barbara Kalmus</div>
-          <div class="team-role">Founder</div>
-        </div>
-        <div class="team-card fade-up">
-          <img class="team-photo" src="perry.webp" alt="Perry Kalmus" style="object-position: center 10%;" />
-          <div class="team-name">Perry Kalmus</div>
-          <div class="team-role">CFO</div>
-        </div>
-        <div class="team-card fade-up">
-          <img class="team-photo" src="ori.jpg" alt="Ori Kalmus" style="object-position: center 15%;" />
-          <div class="team-name">Ori Kalmus</div>
-          <div class="team-role">CEO</div>
-        </div>
-        <div class="team-card fade-up">
-          <img class="team-photo" src="dari.jpg" alt="Dari Kalmus" style="object-position: center 15%;" />
-          <div class="team-name">Dari Kalmus</div>
-          <div class="team-role">Head of Marketing</div>
-        </div>
-        <div class="team-card fade-up">
-          <img class="team-photo" src="patrick.jpg" alt="Patrick Havern" style="object-position: center 20%;" />
-          <div class="team-name">Patrick Havern</div>
-          <div class="team-role">Head of Sales</div>
-        </div>
-        <div class="team-card fade-up">
-          <img class="team-photo" src="abby.webp" alt="Abby Dranikoff" style="object-position: center 10%;" />
-          <div class="team-name">Abby Dranikoff</div>
-          <div class="team-role">Head of Design</div>
-        </div>
-      </div>
-    </div>
+    <div class="shop-grid" id="shop-grid"></div>
   </section>
 
   <!-- FOOTER -->
@@ -980,7 +925,7 @@
     <div class="footer-inner">
       <div class="footer-left">
         <div class="footer-address">9950 Durant Dr Suite 309, Beverly Hills CA 90212</div>
-        <div class="footer-email"><a href="mailto:ori@presentperfectgifts.com">ori@presentperfectgifts.com</a> &nbsp;·&nbsp; <a href="mailto:perry@presentperfectgifts.com">perry@presentperfectgifts.com</a></div>
+        <div class="footer-email"><a href="mailto:ori@presentperfectgifts.com">ori@presentperfectgifts.com</a> &nbsp;&middot;&nbsp; <a href="mailto:perry@presentperfectgifts.com">perry@presentperfectgifts.com</a></div>
       </div>
       <div class="footer-copy">&copy; 2026 Present Perfect. All rights reserved.</div>
     </div>
@@ -1028,8 +973,8 @@
       { id: 4, name: "The Violet", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/5fc60170-26d4-4053-be0a-5be2af2faa18/Screenshot+2024-11-08+at+9.39.00%E2%80%AFPM.png", cat: "gift-baskets", featured: false },
       { id: 5, name: "The Shiri", price: 20, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/bd1e8ffa-1168-4682-a88b-aaf9e823d64e/Basket1_1e7d9874-168b-4ab1-8a78-c3862d872ade_1200x.jpeg", cat: "gift-baskets", featured: false },
       { id: 6, name: "The Lexi", price: 20, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/844b9633-8394-46b0-bc4e-3d660f1a5f37/Screenshot+2024-11-08+at+9.39.43%E2%80%AFPM.png", cat: "gift-baskets", featured: false },
-      { id: 7, name: "Santa Barbara Pistachios — Salted", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/fb7d2f90-e181-47aa-9711-dd9cb5ed32a5/salted-pistachios_1024x.jpg", cat: "snacks", featured: false },
-      { id: 8, name: "Santa Barbara Pistachios — Unsalted", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/9b3c9164-5fb7-44f1-ab0b-b6c57de7d9d4/unsalted-pistachios_grande.jpg", cat: "snacks", featured: false },
+      { id: 7, name: "Santa Barbara Pistachios \u2014 Salted", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/fb7d2f90-e181-47aa-9711-dd9cb5ed32a5/salted-pistachios_1024x.jpg", cat: "snacks", featured: false },
+      { id: 8, name: "Santa Barbara Pistachios \u2014 Unsalted", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/9b3c9164-5fb7-44f1-ab0b-b6c57de7d9d4/unsalted-pistachios_grande.jpg", cat: "snacks", featured: false },
       { id: 9, name: "Assorted Organic Nuts", price: 40, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/4aecad1e-5246-4dfd-94ae-4da0ad669de9/istockphoto-157426759-612x612.jpeg", cat: "snacks", featured: false },
       { id: 10, name: "Sugarfina Ultimate Selection", price: 320, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/2823fc01-09bb-4df2-abd9-3df55df3c673/2023_20pc_preset_trunk-angle-highres_3.jpg", cat: "candy", featured: true },
       { id: 11, name: "Sugarfina Peach Bellini", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/d36464b8-31bf-4910-80de-ab2e63cc752a/72+dpi+webp-6577191_1020_v01.jpeg", cat: "candy", featured: false },
@@ -1049,13 +994,13 @@
       { id: 25, name: "Dutch Oven Colorado Gold BBQ", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/ecc8cf93-e3c1-4de7-9ce3-5fb451257efe/009095019-1.jpeg", cat: "sauces", featured: false },
       { id: 26, name: "Dutch Oven Brushfire BBQ", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/690a0907-9b85-4e4c-9c81-9d12c8657a44/Screenshot+2024-11-08+at+8.43.59%E2%80%AFPM.png", cat: "sauces", featured: false },
       { id: 27, name: "Napule Olive Oil", price: 55, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/524e22aa-3f16-49bb-ae77-616fbe1df6a8/616LoLAEK%2BL.jpg", cat: "spices", featured: true },
-      { id: 28, name: "Colorado Mountain Jam — Vanilla Pear", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/cb80e0cd-03b5-4df9-b82d-317700544c31/Vanilla-Pear-300x300.jpg", cat: "sauces", featured: false },
+      { id: 28, name: "Colorado Mountain Jam \u2014 Vanilla Pear", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/cb80e0cd-03b5-4df9-b82d-317700544c31/Vanilla-Pear-300x300.jpg", cat: "sauces", featured: false },
       { id: 29, name: "Compartes Chocolates", price: 125, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/bf40b717-a74a-4074-90c6-664f1c13aff8/compartes-luxury-chocolate-truffles-assortment-gift-box.jpg", cat: "chocolate", featured: true },
       { id: 30, name: "Compartes Dipped Fruit", price: 145, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/fd6cbe75-0e54-4764-983f-8fa5429c08ff/Premium-Luxury-Chocolate-Dipped-Fruits-Gift-Box.jpg", cat: "chocolate", featured: false },
       { id: 31, name: "Compartes 4-Bar Set", price: 45, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/8c5ea5cb-0cc5-41ab-acfd-ce1613fb4521/CompartesBox-4BarSet-Nostalgic_1200x1200_crop_center.jpg", cat: "chocolate", featured: false },
-      { id: 32, name: "Colorado Mountain Jam — Spiced Plum", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/64be061e-0efd-4458-b859-085b33ad6d7d/Spiced-Plum-300x300.jpg", cat: "sauces", featured: false },
-      { id: 33, name: "Colorado Mountain Jam — Peach Jalape\u00f1o", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/19930935-dcf7-4fdd-b2b4-e59571de5c52/Peach-Jalapeno-300x300.jpg", cat: "sauces", featured: false },
-      { id: 34, name: "Colorado Mountain Jam — Cherry Pie", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/61524f08-371e-48ea-b453-3280aa81206a/Cherry-Pie-300x300.jpg", cat: "sauces", featured: false },
+      { id: 32, name: "Colorado Mountain Jam \u2014 Spiced Plum", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/64be061e-0efd-4458-b859-085b33ad6d7d/Spiced-Plum-300x300.jpg", cat: "sauces", featured: false },
+      { id: 33, name: "Colorado Mountain Jam \u2014 Peach Jalape\u00f1o", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/19930935-dcf7-4fdd-b2b4-e59571de5c52/Peach-Jalapeno-300x300.jpg", cat: "sauces", featured: false },
+      { id: 34, name: "Colorado Mountain Jam \u2014 Cherry Pie", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/61524f08-371e-48ea-b453-3280aa81206a/Cherry-Pie-300x300.jpg", cat: "sauces", featured: false },
     ];
 
     // ── CART STATE ──
@@ -1118,9 +1063,26 @@
         '</div></div>';
     }
 
-    // Featured
-    var featuredProducts = products.filter(function(p) { return p.featured; });
-    document.getElementById('featured-grid').innerHTML = featuredProducts.map(createProductCard).join('');
+    // Shop all
+    document.getElementById('shop-grid').innerHTML = products.map(createProductCard).join('');
+
+    // ── FILTERS ──
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.getAttribute('data-filter');
+        var cards = document.querySelectorAll('#shop-grid .product-card');
+        cards.forEach(function(card) {
+          if (filter === 'all' || card.getAttribute('data-cat') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
 
     // ── CART DRAWER ──
     var cartOverlay = document.getElementById('cart-overlay');
