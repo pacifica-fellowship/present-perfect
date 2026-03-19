@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Present Perfect — The Perfect Gift Does Exist</title>
+  <meta name="description" content="Premium curated gift baskets from Beverly Hills. Three decades of superior customer service and tailor-made experiences." />
+  <meta property="og:title" content="Present Perfect — The Perfect Gift Does Exist" />
+  <meta property="og:description" content="Premium curated gift baskets from Beverly Hills." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #faf9f7;
+      --bg-warm: #f5f0eb;
+      --bg-dark: #1a1714;
+      --text: #1a1714;
+      --text-light: #6b6560;
+      --accent: #8b6f47;
+      --accent-light: #c9a96e;
+      --accent-dark: #6b5535;
+      --border: #e8e2da;
+      --white: #ffffff;
+      --max-w: 1200px;
+      --radius: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(250, 249, 247, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.4s ease;
+    }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 72px;
+    }
+
+    .nav-logo {
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-present {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-perfect {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cart {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+      background: none;
+      border: none;
+      font-family: inherit;
+      transition: color 0.3s ease;
+    }
+
+    .nav-cart:hover { color: var(--accent); }
+
+    .nav-cart svg { width: 20px; height: 20px; }
+
+    .cart-count {
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.6rem;
+      font-weight: 600;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -6px;
+      right: -10px;
+    }
+
+    .cart-count.hidden { display: none; }
+
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .nav-hamburger svg { width: 24px; height: 24px; stroke: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 2rem 80px;
+      background: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26, 23, 20, 0.4) 0%, rgba(26, 23, 20, 0.7) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+
+    .hero-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 2rem;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      font-style: italic;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 3rem;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2.5rem;
+      background: var(--white);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-radius: 0;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    .hero-cta:hover { background: var(--accent-light); color: var(--bg-dark); }
+
+    .hero-cta svg { width: 14px; height: 14px; }
+
+    /* ── FEATURED ── */
+    .featured {
+      padding: 6rem 2rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.15;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ── PRODUCT CARD ── */
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    }
+
+    .product-img-wrap {
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: #f0ece6;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .product-info {
+      padding: 1.25rem;
+    }
+
+    .product-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+      line-height: 1.3;
+    }
+
+    .product-price {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .add-to-cart-btn {
+      width: 100%;
+      padding: 0.7rem;
+      background: var(--text);
+      color: var(--white);
+      border: none;
+      font-family: inherit;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border-radius: 4px;
+    }
+
+    .add-to-cart-btn:hover { background: var(--accent-dark); }
+
+    .add-to-cart-btn.added {
+      background: var(--accent);
+    }
+
+    .view-all-wrap {
+      text-align: center;
+    }
+
+    .view-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.85rem 2rem;
+      border: 1.5px solid var(--text);
+      transition: all 0.3s ease;
+    }
+
+    .view-all:hover { background: var(--text); color: var(--white); }
+
+    .view-all svg { width: 14px; height: 14px; }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 0;
+      background: var(--bg-warm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-inner {
+      max-width: none;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+
+    .about-text-wrap {
+      padding: 6rem 4rem 6rem 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .about-text strong {
+      font-weight: 600;
+      color: var(--accent-dark);
+    }
+
+    .about-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    /* ── SHOP ALL ── */
+    .shop {
+      padding: 6rem 2rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .shop-filters {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1.25rem;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+
+    .filter-btn:hover { border-color: var(--text); }
+    .filter-btn.active { background: var(--text); color: var(--white); border-color: var(--text); }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+    }
+
+    /* ── TEAM ── */
+    .team {
+      padding: 6rem 2rem;
+      background: var(--bg-dark);
+      color: var(--white);
+    }
+
+    .team-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .team .section-label { color: var(--accent-light); }
+    .team .section-title { color: var(--white); }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .team-card {
+      text-align: center;
+    }
+
+    .team-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.25rem;
+      border: 2px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .team-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .team-role {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .footer-address, .footer-email {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-email a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-email a:hover { color: var(--accent-light); }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ── CART DRAWER ── */
+    .cart-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 9998;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .cart-overlay.active { display: block; }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 400px;
+      max-width: 90vw;
+      height: 100vh;
+      background: var(--white);
+      z-index: 9999;
+      transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -8px 0 30px rgba(0,0,0,0.1);
+    }
+
+    .cart-drawer.active { right: 0; }
+
+    .cart-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cart-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .cart-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    .cart-close svg { width: 24px; height: 24px; stroke: var(--text); }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem 1.5rem;
+    }
+
+    .cart-empty {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+    }
+
+    .cart-item-img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .cart-item-details {
+      flex: 1;
+    }
+
+    .cart-item-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .cart-item-price {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .cart-item-qty {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .qty-btn {
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--border);
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--text);
+      border-radius: 4px;
+      transition: border-color 0.2s;
+    }
+
+    .qty-btn:hover { border-color: var(--text); }
+
+    .cart-item-remove {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-light);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.35rem;
+      padding: 0;
+      transition: color 0.2s;
+    }
+
+    .cart-item-remove:hover { color: #c0392b; }
+
+    .cart-footer {
+      padding: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .cart-total-amount {
+      color: var(--accent);
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--text);
+      color: var(--white);
+      border: none;
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .checkout-btn:hover { background: var(--accent-dark); }
+
+    /* ── CHECKOUT MODAL ── */
+    .checkout-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .checkout-modal.active { display: flex; }
+
+    .checkout-modal-box {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 3rem 2.5rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .checkout-modal-box svg {
+      width: 48px;
+      height: 48px;
+      stroke: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .checkout-modal-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .checkout-modal-box p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .checkout-modal-close {
+      padding: 0.75rem 2rem;
+      background: var(--text);
+      color: var(--white);
+      border: none;
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .checkout-modal-close:hover { background: var(--accent-dark); }
+
+    /* ── FADE IN ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+
+      .nav-links.mobile-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(250, 249, 247, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 1.5rem 2rem;
+        gap: 1.25rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .featured-grid { grid-template-columns: 1fr 1fr; }
+      .shop-grid { grid-template-columns: 1fr 1fr; }
+      .about-inner { grid-template-columns: 1fr; gap: 0; }
+      .about-text-wrap { padding: 4rem 1.25rem; max-width: 100%; }
+      .about-img { height: 350px; }
+      .team-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+      .team-photo { width: 100px; height: 100px; }
+
+      .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { min-height: 80vh; padding: 100px 1.25rem 60px; }
+      .hero-title { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+      .hero-subtitle { font-size: 1.1rem; }
+
+      .featured { padding: 4rem 1.25rem; }
+      .featured-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+      .shop { padding: 4rem 1.25rem; }
+      .shop-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .shop-filters { gap: 0.35rem; }
+      .filter-btn { padding: 0.4rem 0.85rem; font-size: 0.65rem; }
+
+      .about { padding: 4rem 1.25rem; }
+      .about-img { height: 280px; }
+
+      .team { padding: 4rem 1.25rem; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+      .team-photo { width: 80px; height: 80px; }
+      .team-name { font-size: 1rem; }
+      .team-role { font-size: 0.62rem; }
+
+      .product-name { font-size: 1rem; }
+      .product-price { font-size: 0.8rem; margin-bottom: 0.75rem; }
+      .product-info { padding: 1rem; }
+
+      .section-title { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+    }
+
+    @media (max-width: 390px) {
+      .nav-inner { padding: 0 1rem; height: 64px; }
+      .logo-present { font-size: 1.3rem; }
+      .shop-grid { gap: 0.75rem; }
+      .product-info { padding: 0.75rem; }
+      .product-name { font-size: 0.9rem; }
+      .add-to-cart-btn { font-size: 0.6rem; padding: 0.6rem; }
+    }
+
+    /* Disable hover on touch */
+    @media (hover: none) {
+      .product-card:hover { transform: none; box-shadow: none; }
+      .product-card:hover .product-img-wrap img { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-present">Present Perfect</span>
+        <span class="logo-perfect">Beverly Hills</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Our People</a></li>
+      </ul>
+      <button class="nav-cart" id="cart-toggle" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-count hidden" id="cart-count">0</span>
+      </button>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-label fade-up">Celebrating Three Decades in Beverly Hills</div>
+      <h1 class="hero-title fade-up">Present <em>Perfect</em></h1>
+      <p class="hero-subtitle fade-up">The perfect gift does exist</p>
+      <a href="#shop" class="hero-cta fade-up">Shop the Collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="featured" id="featured">
+    <div class="section-header">
+      <div class="section-label fade-up">Curated Favorites</div>
+      <h2 class="section-title fade-up">Founder's Picks of 2026</h2>
+    </div>
+    <div class="featured-grid" id="featured-grid"></div>
+    <div class="view-all-wrap fade-up">
+      <a href="#shop" class="view-all">View All Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text-wrap">
+        <div class="section-label fade-up">Who We Are</div>
+        <h2 class="section-title fade-up" style="text-align:left; margin-bottom: 2rem;">Three Decades of <br>Beverly Hills Gifting</h2>
+        <p class="about-text fade-up">A company that has been around for <strong>three decades</strong>, serving Beverly Hills premium gift baskets for the holidays and special occasions throughout the year. Present Perfect delivers <strong>superior customer service</strong>, and tailor-made experiences for each person, at a high level that has earned us distinction in our field. Started by <strong>Barbara Kalmus</strong>, the business has flourished under her children, Perry, Dari and Ori Kalmus. Present Perfect is the best choice to make your present no less than <strong>perfect</strong>.</p>
+      </div>
+      <img class="about-img fade-up" src="about-photo.jpg" alt="The Beverly Hills" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="shop" id="shop">
+    <div class="section-header">
+      <div class="section-label fade-up">The Collection</div>
+      <h2 class="section-title fade-up">Shop All</h2>
+    </div>
+    <div class="shop-filters fade-up" id="shop-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="gift-baskets">Gift Baskets</button>
+      <button class="filter-btn" data-filter="chocolate">Chocolate</button>
+      <button class="filter-btn" data-filter="candy">Candy</button>
+      <button class="filter-btn" data-filter="jerky">Jerky</button>
+      <button class="filter-btn" data-filter="sauces">Sauces &amp; Jams</button>
+      <button class="filter-btn" data-filter="snacks">Snacks &amp; Crackers</button>
+      <button class="filter-btn" data-filter="spices">Spices &amp; Oil</button>
+    </div>
+    <div class="shop-grid" id="shop-grid"></div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team" id="team">
+    <div class="team-inner">
+      <div class="section-header">
+        <div class="section-label fade-up">Perfect People</div>
+        <h2 class="section-title fade-up">Meet the Team</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-card fade-up">
+          <img class="team-photo" src="barb.jpg" alt="Barbara Kalmus" style="object-position: center 15%;" />
+          <div class="team-name">Barbara Kalmus</div>
+          <div class="team-role">Founder</div>
+        </div>
+        <div class="team-card fade-up">
+          <img class="team-photo" src="perry.webp" alt="Perry Kalmus" style="object-position: center 10%;" />
+          <div class="team-name">Perry Kalmus</div>
+          <div class="team-role">CFO</div>
+        </div>
+        <div class="team-card fade-up">
+          <img class="team-photo" src="ori.jpg" alt="Ori Kalmus" style="object-position: center 15%;" />
+          <div class="team-name">Ori Kalmus</div>
+          <div class="team-role">CEO</div>
+        </div>
+        <div class="team-card fade-up">
+          <img class="team-photo" src="dari.jpg" alt="Dari Kalmus" style="object-position: center 15%;" />
+          <div class="team-name">Dari Kalmus</div>
+          <div class="team-role">Head of Marketing</div>
+        </div>
+        <div class="team-card fade-up">
+          <img class="team-photo" src="patrick.jpg" alt="Patrick Havern" style="object-position: center 20%;" />
+          <div class="team-name">Patrick Havern</div>
+          <div class="team-role">Head of Sales</div>
+        </div>
+        <div class="team-card fade-up">
+          <img class="team-photo" src="abby.webp" alt="Abby Dranikoff" style="object-position: center 10%;" />
+          <div class="team-name">Abby Dranikoff</div>
+          <div class="team-role">Head of Design</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-address">9950 Durant Dr Suite 309, Beverly Hills CA 90212</div>
+        <div class="footer-email"><a href="mailto:ori@presentperfectgifts.com">ori@presentperfectgifts.com</a> &nbsp;·&nbsp; <a href="mailto:perry@presentperfectgifts.com">perry@presentperfectgifts.com</a></div>
+      </div>
+      <div class="footer-copy">&copy; 2026 Present Perfect. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- CART OVERLAY -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-title">Your Cart</div>
+      <button class="cart-close" id="cart-close" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">Your cart is empty</div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none;">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-amount" id="cart-total">$0.00</span>
+      </div>
+      <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="checkout-modal" id="checkout-modal">
+    <div class="checkout-modal-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      <h3>Checkout Coming Soon</h3>
+      <p>Online payments are launching very soon. In the meantime, please email us at <strong>ori@presentperfectgifts.com</strong> to place your order and we'll take care of everything.</p>
+      <button class="checkout-modal-close" id="checkout-modal-close">Got It</button>
+    </div>
+  </div>
+
+  <script>
+    // ── PRODUCTS ──
+    var products = [
+      { id: 1, name: "The Daryn", price: 20, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/7e4710bf-d1fe-4832-8530-4d68429ccb3e/Screenshot+2024-11-08+at+9.38.05%E2%80%AFPM.png", cat: "gift-baskets", featured: false },
+      { id: 2, name: "The Cayden", price: 50, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/140727fc-bae3-42dc-b698-ccb0b51ffc23/Screenshot+2024-11-08+at+9.36.49%E2%80%AFPM.png", cat: "gift-baskets", featured: false },
+      { id: 3, name: "The Rachel Rose", price: 50, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/737144c5-0602-43ff-a2b4-7650405692c1/Screenshot+2024-11-08+at+9.37.30%E2%80%AFPM.png", cat: "gift-baskets", featured: false },
+      { id: 4, name: "The Violet", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/5fc60170-26d4-4053-be0a-5be2af2faa18/Screenshot+2024-11-08+at+9.39.00%E2%80%AFPM.png", cat: "gift-baskets", featured: false },
+      { id: 5, name: "The Shiri", price: 20, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/bd1e8ffa-1168-4682-a88b-aaf9e823d64e/Basket1_1e7d9874-168b-4ab1-8a78-c3862d872ade_1200x.jpeg", cat: "gift-baskets", featured: false },
+      { id: 6, name: "The Lexi", price: 20, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/844b9633-8394-46b0-bc4e-3d660f1a5f37/Screenshot+2024-11-08+at+9.39.43%E2%80%AFPM.png", cat: "gift-baskets", featured: false },
+      { id: 7, name: "Santa Barbara Pistachios — Salted", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/fb7d2f90-e181-47aa-9711-dd9cb5ed32a5/salted-pistachios_1024x.jpg", cat: "snacks", featured: false },
+      { id: 8, name: "Santa Barbara Pistachios — Unsalted", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/9b3c9164-5fb7-44f1-ab0b-b6c57de7d9d4/unsalted-pistachios_grande.jpg", cat: "snacks", featured: false },
+      { id: 9, name: "Assorted Organic Nuts", price: 40, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/4aecad1e-5246-4dfd-94ae-4da0ad669de9/istockphoto-157426759-612x612.jpeg", cat: "snacks", featured: false },
+      { id: 10, name: "Sugarfina Ultimate Selection", price: 320, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/2823fc01-09bb-4df2-abd9-3df55df3c673/2023_20pc_preset_trunk-angle-highres_3.jpg", cat: "candy", featured: true },
+      { id: 11, name: "Sugarfina Peach Bellini", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/d36464b8-31bf-4910-80de-ab2e63cc752a/72+dpi+webp-6577191_1020_v01.jpeg", cat: "candy", featured: false },
+      { id: 12, name: "Sugarfina Champagne Candies", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/943d1451-df59-450a-9050-2920c93d66c4/51nJfqeotGS.jpeg", cat: "candy", featured: false },
+      { id: 13, name: "Sugarfina Strawberry Champagne", price: 30, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/d741f7ef-4885-46ba-9e65-1087924b6a9d/strawberry_champagne_bears-angled-lg-single-hi-res.png.jpeg", cat: "candy", featured: false },
+      { id: 14, name: "Assorted Spices 8-Pack", price: 70, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/c840709d-d4dd-4d41-9e86-dd47e77d06bd/banner-spices-landing-page.jpeg", cat: "spices", featured: false },
+      { id: 15, name: "Assorted Spices 3-Pack", price: 20, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/73831043-990a-4421-97c3-5284c3f672da/banner-spices-landing-page.jpeg", cat: "spices", featured: false },
+      { id: 16, name: "34 Degrees Rosemary Crackers", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/5d6e547c-b0c2-4595-b313-865fcbcf57a8/vertical.png.jpeg", cat: "snacks", featured: false },
+      { id: 17, name: "34 Degrees Crackers Original", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/7e04de4b-259e-4f77-a148-7fc60212a945/34-Degrees-Crackers-Original-Entertaining-Crisps-4-5-oz_70c58646-2564-4c64-82ac-fffa096e11c2.335972e464431a915096e6d8df3d82d4.jpeg", cat: "snacks", featured: false },
+      { id: 18, name: "34 Degrees Whole Grain Crackers", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/472c1577-9ee7-4104-ba47-997fc4f42db4/34-Degrees-Crackers-Whole-Grain-Entertaining-Crisps-4-5-oz_aa2f0b32-2204-4102-adf8-36edb87cb9d3_1.0924a8c19d2624347fdc7004e0d05210.jpeg", cat: "snacks", featured: false },
+      { id: 19, name: "Righteous Felon Baby Blues BBQ", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/ded82131-4bda-49c0-b66c-37274653c488/babybluesbbq_1200x1200.png.jpeg", cat: "jerky", featured: false },
+      { id: 20, name: "Righteous Felon Fowl Capone", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/e5cb5287-78b7-45c7-bc4e-22b798c79722/103514703.jpg", cat: "jerky", featured: false },
+      { id: 21, name: "Righteous Felon OG Hickory", price: 12, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/30c77bf5-86cc-4710-b6a1-f7971c6b4b11/OGHickory_grande.png.jpeg", cat: "jerky", featured: false },
+      { id: 22, name: "Righteous Felon 8-Pack with Sticks", price: 70, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/a751f2bb-58c1-4b2b-a5a4-fdaf82c45856/Screenshot+2024-11-08+at+8.46.49%E2%80%AFPM.png", cat: "jerky", featured: false },
+      { id: 23, name: "Dutch Oven Sauce Set", price: 28, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/342d3fcd-32f1-47a1-9da7-1c1a6a8626d6/Screenshot+2024-11-08+at+8.37.11%E2%80%AFPM.png", cat: "sauces", featured: false },
+      { id: 24, name: "Dutch Oven Sweet & Sassy BBQ", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/7000b9eb-7a94-4124-bcbe-0f7de720f232/009095520-1.jpeg", cat: "sauces", featured: false },
+      { id: 25, name: "Dutch Oven Colorado Gold BBQ", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/ecc8cf93-e3c1-4de7-9ce3-5fb451257efe/009095019-1.jpeg", cat: "sauces", featured: false },
+      { id: 26, name: "Dutch Oven Brushfire BBQ", price: 10, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/690a0907-9b85-4e4c-9c81-9d12c8657a44/Screenshot+2024-11-08+at+8.43.59%E2%80%AFPM.png", cat: "sauces", featured: false },
+      { id: 27, name: "Napule Olive Oil", price: 55, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/524e22aa-3f16-49bb-ae77-616fbe1df6a8/616LoLAEK%2BL.jpg", cat: "spices", featured: true },
+      { id: 28, name: "Colorado Mountain Jam — Vanilla Pear", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/cb80e0cd-03b5-4df9-b82d-317700544c31/Vanilla-Pear-300x300.jpg", cat: "sauces", featured: false },
+      { id: 29, name: "Compartes Chocolates", price: 125, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/bf40b717-a74a-4074-90c6-664f1c13aff8/compartes-luxury-chocolate-truffles-assortment-gift-box.jpg", cat: "chocolate", featured: true },
+      { id: 30, name: "Compartes Dipped Fruit", price: 145, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/fd6cbe75-0e54-4764-983f-8fa5429c08ff/Premium-Luxury-Chocolate-Dipped-Fruits-Gift-Box.jpg", cat: "chocolate", featured: false },
+      { id: 31, name: "Compartes 4-Bar Set", price: 45, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/8c5ea5cb-0cc5-41ab-acfd-ce1613fb4521/CompartesBox-4BarSet-Nostalgic_1200x1200_crop_center.jpg", cat: "chocolate", featured: false },
+      { id: 32, name: "Colorado Mountain Jam — Spiced Plum", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/64be061e-0efd-4458-b859-085b33ad6d7d/Spiced-Plum-300x300.jpg", cat: "sauces", featured: false },
+      { id: 33, name: "Colorado Mountain Jam — Peach Jalape\u00f1o", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/19930935-dcf7-4fdd-b2b4-e59571de5c52/Peach-Jalapeno-300x300.jpg", cat: "sauces", featured: false },
+      { id: 34, name: "Colorado Mountain Jam — Cherry Pie", price: 13, img: "https://images.squarespace-cdn.com/content/v1/672ea4880e0e8d18537dd783/61524f08-371e-48ea-b453-3280aa81206a/Cherry-Pie-300x300.jpg", cat: "sauces", featured: false },
+
+      // ── ADDITIONAL PRODUCTS ──
+      // Gift Baskets
+      { id: 35, name: "The Beverly", price: 53, img: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=400&q=80", cat: "gift-baskets", featured: false },
+      { id: 36, name: "The Sunset", price: 33, img: "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=400&q=80", cat: "gift-baskets", featured: false },
+      { id: 37, name: "The Rodeo", price: 23, img: "https://images.unsplash.com/photo-1549465220-1a8b9238f7e8?w=400&q=80", cat: "gift-baskets", featured: false },
+
+      // Chocolate
+      { id: 38, name: "Compartes Caramel Collection", price: 48, img: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400&q=80", cat: "chocolate", featured: false },
+      { id: 39, name: "Compartes Dark Chocolate Truffles", price: 128, img: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&q=80", cat: "chocolate", featured: false },
+      { id: 40, name: "Compartes Artisan Bonbons", price: 148, img: "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=400&q=80", cat: "chocolate", featured: false },
+
+      // Candy
+      { id: 41, name: "Sugarfina Rosé All Day Bears", price: 33, img: "https://images.unsplash.com/photo-1581798459219-318e76aecc7b?w=400&q=80", cat: "candy", featured: false },
+      { id: 42, name: "Sugarfina Heavenly Sours", price: 33, img: "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=400&q=80", cat: "candy", featured: false },
+      { id: 43, name: "Sugarfina 8-Piece Bento Box", price: 65, img: "https://images.unsplash.com/photo-1563262924-641a8b3d397f?w=400&q=80", cat: "candy", featured: false },
+
+      // Jerky
+      { id: 44, name: "Righteous Felon Habanero Escobar", price: 13, img: "https://images.unsplash.com/photo-1613145997970-db84a7975fbb?w=400&q=80", cat: "jerky", featured: false },
+      { id: 45, name: "Righteous Felon Voodoo Chile", price: 13, img: "https://images.unsplash.com/photo-1612871689353-cef2e12f9e55?w=400&q=80", cat: "jerky", featured: false },
+      { id: 46, name: "Righteous Felon 12-Pack Sampler", price: 73, img: "https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?w=400&q=80", cat: "jerky", featured: false },
+
+      // Sauces & Jams
+      { id: 47, name: "Colorado Mountain Jam — Apricot Honey", price: 15, img: "https://images.unsplash.com/photo-1597528662465-55ece5734101?w=400&q=80", cat: "sauces", featured: false },
+      { id: 48, name: "Dutch Oven Smoky Chipotle BBQ", price: 13, img: "https://images.unsplash.com/photo-1619221882266-c3a307573ea8?w=400&q=80", cat: "sauces", featured: false },
+      { id: 49, name: "Dutch Oven Deluxe Sauce Set", price: 32, img: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=400&q=80", cat: "sauces", featured: false },
+
+      // Snacks & Crackers
+      { id: 50, name: "34 Degrees Toasted Onion Crackers", price: 13, img: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&q=80", cat: "snacks", featured: false },
+      { id: 51, name: "Santa Barbara Pistachios — Chili Lime", price: 33, img: "https://images.unsplash.com/photo-1616684000067-36952fde56ec?w=400&q=80", cat: "snacks", featured: false },
+      { id: 52, name: "Premium Mixed Nut Gift Tin", price: 43, img: "https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=400&q=80", cat: "snacks", featured: false },
+
+      // Spices & Oil
+      { id: 53, name: "Napule Balsamic Vinegar", price: 58, img: "https://images.unsplash.com/photo-1604514628550-37477afdf4e3?w=400&q=80", cat: "spices", featured: false },
+      { id: 54, name: "Assorted Spices 5-Pack", price: 43, img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80", cat: "spices", featured: false },
+      { id: 55, name: "Truffle Salt & Pepper Set", price: 73, img: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=400&q=80", cat: "spices", featured: false }
+    ];
+
+    // ── CART STATE ──
+    var cart = JSON.parse(localStorage.getItem('pp-cart') || '[]');
+
+    function saveCart() {
+      localStorage.setItem('pp-cart', JSON.stringify(cart));
+      updateCartCount();
+    }
+
+    function updateCartCount() {
+      var count = cart.reduce(function(sum, item) { return sum + item.qty; }, 0);
+      var el = document.getElementById('cart-count');
+      el.textContent = count;
+      if (count > 0) { el.classList.remove('hidden'); } else { el.classList.add('hidden'); }
+    }
+
+    function addToCart(id) {
+      var product = products.find(function(p) { return p.id === id; });
+      var existing = cart.find(function(c) { return c.id === id; });
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ id: product.id, name: product.name, price: product.price, img: product.img, qty: 1 });
+      }
+      saveCart();
+
+      // Button feedback
+      var btn = document.querySelector('[data-add="' + id + '"]');
+      if (btn) {
+        btn.textContent = 'Added!';
+        btn.classList.add('added');
+        setTimeout(function() { btn.textContent = 'Add to Cart'; btn.classList.remove('added'); }, 1200);
+      }
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(function(c) { return c.id !== id; });
+      saveCart();
+      renderCartDrawer();
+    }
+
+    function updateQty(id, delta) {
+      var item = cart.find(function(c) { return c.id === id; });
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty < 1) { removeFromCart(id); return; }
+      saveCart();
+      renderCartDrawer();
+    }
+
+    // ── RENDER PRODUCTS ──
+    function createProductCard(product) {
+      return '<div class="product-card fade-up" data-cat="' + product.cat + '">' +
+        '<div class="product-img-wrap"><img src="' + product.img + '" alt="' + product.name + '" loading="lazy" /></div>' +
+        '<div class="product-info">' +
+          '<div class="product-name">' + product.name + '</div>' +
+          '<div class="product-price">$' + product.price + '.00</div>' +
+          '<button class="add-to-cart-btn" data-add="' + product.id + '" onclick="addToCart(' + product.id + ')">Add to Cart</button>' +
+        '</div></div>';
+    }
+
+    // Featured
+    var featuredProducts = products.filter(function(p) { return p.featured; });
+    document.getElementById('featured-grid').innerHTML = featuredProducts.map(createProductCard).join('');
+
+    // Founder's Curated Picks card (appended to each category)
+    var founderCard = { id: 99, name: "Founder's Curated Picks", price: 75, img: "about-bg.jpg", cat: "founders", featured: false };
+
+    // Group products by category and append founder card to each
+    var categories = ['gift-baskets', 'chocolate', 'candy', 'jerky', 'sauces', 'snacks', 'spices'];
+    var shopProducts = [];
+    categories.forEach(function(cat) {
+      var catProducts = products.filter(function(p) { return p.cat === cat; });
+      shopProducts = shopProducts.concat(catProducts);
+      // Add founder card tagged with this category
+      shopProducts.push({ id: 99, name: "Founder's Curated Picks", price: 75, img: "about-bg.jpg", cat: cat, featured: false });
+    });
+
+    // Shop all
+    document.getElementById('shop-grid').innerHTML = shopProducts.map(createProductCard).join('');
+
+    // ── FILTERS ──
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.getAttribute('data-filter');
+        var cards = document.querySelectorAll('#shop-grid .product-card');
+        cards.forEach(function(card) {
+          if (filter === 'all' || card.getAttribute('data-cat') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ── CART DRAWER ──
+    var cartOverlay = document.getElementById('cart-overlay');
+    var cartDrawer = document.getElementById('cart-drawer');
+
+    function openCart() {
+      renderCartDrawer();
+      cartOverlay.classList.add('active');
+      cartDrawer.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+      cartOverlay.classList.remove('active');
+      cartDrawer.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('cart-toggle').addEventListener('click', openCart);
+    document.getElementById('cart-close').addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    function renderCartDrawer() {
+      var itemsEl = document.getElementById('cart-items');
+      var footerEl = document.getElementById('cart-footer');
+
+      if (cart.length === 0) {
+        itemsEl.innerHTML = '<div class="cart-empty">Your cart is empty</div>';
+        footerEl.style.display = 'none';
+        return;
+      }
+
+      var html = '';
+      var total = 0;
+      cart.forEach(function(item) {
+        total += item.price * item.qty;
+        html += '<div class="cart-item">' +
+          '<img class="cart-item-img" src="' + item.img + '" alt="' + item.name + '" />' +
+          '<div class="cart-item-details">' +
+            '<div class="cart-item-name">' + item.name + '</div>' +
+            '<div class="cart-item-price">$' + (item.price * item.qty) + '.00</div>' +
+            '<div class="cart-item-qty">' +
+              '<button class="qty-btn" onclick="updateQty(' + item.id + ', -1)">&minus;</button>' +
+              '<span>' + item.qty + '</span>' +
+              '<button class="qty-btn" onclick="updateQty(' + item.id + ', 1)">+</button>' +
+            '</div>' +
+            '<button class="cart-item-remove" onclick="removeFromCart(' + item.id + ')">Remove</button>' +
+          '</div></div>';
+      });
+
+      itemsEl.innerHTML = html;
+      document.getElementById('cart-total').textContent = '$' + total + '.00';
+      footerEl.style.display = '';
+    }
+
+    // ── CHECKOUT MODAL ──
+    document.getElementById('checkout-btn').addEventListener('click', function() {
+      closeCart();
+      document.getElementById('checkout-modal').classList.add('active');
+    });
+
+    document.getElementById('checkout-modal-close').addEventListener('click', function() {
+      document.getElementById('checkout-modal').classList.remove('active');
+    });
+
+    document.getElementById('checkout-modal').addEventListener('click', function(e) {
+      if (e.target === this) this.classList.remove('active');
+    });
+
+    // ── MOBILE NAV ──
+    document.getElementById('nav-hamburger').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('mobile-open');
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('#nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('nav-links').classList.remove('mobile-open');
+      });
+    });
+
+    // ── FADE IN ──
+    var fadeEls = document.querySelectorAll('.fade-up');
+    var fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(function(el) { fadeObserver.observe(el); });
+
+    // Init cart count
+    updateCartCount();
+  </script>
+
+</body>
+</html>
