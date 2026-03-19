@@ -1177,21 +1177,8 @@
     var featuredProducts = products.filter(function(p) { return p.featured; });
     document.getElementById('featured-grid').innerHTML = featuredProducts.map(createProductCard).join('');
 
-    // Founder's Curated Picks card (appended to each category)
-    var founderCard = { id: 99, name: "Founder's Curated Picks", price: 75, img: "about-bg.jpg", cat: "founders", featured: false };
-
-    // Group products by category and append founder card to each
-    var categories = ['gift-baskets', 'chocolate', 'candy', 'jerky', 'sauces', 'snacks', 'spices'];
-    var shopProducts = [];
-    categories.forEach(function(cat) {
-      var catProducts = products.filter(function(p) { return p.cat === cat; });
-      shopProducts = shopProducts.concat(catProducts);
-      // Add founder card tagged with this category
-      shopProducts.push({ id: 99, name: "Founder's Curated Picks", price: 75, img: "about-bg.jpg", cat: cat, featured: false });
-    });
-
     // Shop all
-    document.getElementById('shop-grid').innerHTML = shopProducts.map(createProductCard).join('');
+    document.getElementById('shop-grid').innerHTML = products.map(createProductCard).join('');
 
     // ── FILTERS ──
     var filterBtns = document.querySelectorAll('.filter-btn');
