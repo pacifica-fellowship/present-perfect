@@ -1080,7 +1080,6 @@
       // Gift Baskets
       { id: 35, name: "The Beverly", price: 53, img: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=400&q=80", cat: "gift-baskets", featured: false },
       { id: 36, name: "The Sunset", price: 33, img: "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=400&q=80", cat: "gift-baskets", featured: false },
-      { id: 37, name: "The Rodeo", price: 23, img: "https://images.unsplash.com/photo-1549465220-1a8b9238f7e8?w=400&q=80", cat: "gift-baskets", featured: false },
 
       // Chocolate
       { id: 38, name: "Compartes Caramel Collection", price: 48, img: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400&q=80", cat: "chocolate", featured: false },
@@ -1088,27 +1087,18 @@
       { id: 40, name: "Compartes Artisan Bonbons", price: 148, img: "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=400&q=80", cat: "chocolate", featured: false },
 
       // Candy
-      { id: 41, name: "Sugarfina Rosé All Day Bears", price: 33, img: "https://images.unsplash.com/photo-1581798459219-318e76aecc7b?w=400&q=80", cat: "candy", featured: false },
-      { id: 42, name: "Sugarfina Heavenly Sours", price: 33, img: "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=400&q=80", cat: "candy", featured: false },
-      { id: 43, name: "Sugarfina 8-Piece Bento Box", price: 65, img: "https://images.unsplash.com/photo-1563262924-641a8b3d397f?w=400&q=80", cat: "candy", featured: false },
 
       // Jerky
       { id: 44, name: "Righteous Felon Habanero Escobar", price: 13, img: "https://images.unsplash.com/photo-1613145997970-db84a7975fbb?w=400&q=80", cat: "jerky", featured: false },
-      { id: 45, name: "Righteous Felon Voodoo Chile", price: 13, img: "https://images.unsplash.com/photo-1612871689353-cef2e12f9e55?w=400&q=80", cat: "jerky", featured: false },
-      { id: 46, name: "Righteous Felon 12-Pack Sampler", price: 73, img: "https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?w=400&q=80", cat: "jerky", featured: false },
 
       // Sauces & Jams
       { id: 47, name: "Colorado Mountain Jam — Apricot Honey", price: 15, img: "https://images.unsplash.com/photo-1597528662465-55ece5734101?w=400&q=80", cat: "sauces", featured: false },
-      { id: 48, name: "Dutch Oven Smoky Chipotle BBQ", price: 13, img: "https://images.unsplash.com/photo-1619221882266-c3a307573ea8?w=400&q=80", cat: "sauces", featured: false },
       { id: 49, name: "Dutch Oven Deluxe Sauce Set", price: 32, img: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=400&q=80", cat: "sauces", featured: false },
 
       // Snacks & Crackers
       { id: 50, name: "34 Degrees Toasted Onion Crackers", price: 13, img: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&q=80", cat: "snacks", featured: false },
-      { id: 51, name: "Santa Barbara Pistachios — Chili Lime", price: 33, img: "https://images.unsplash.com/photo-1616684000067-36952fde56ec?w=400&q=80", cat: "snacks", featured: false },
-      { id: 52, name: "Premium Mixed Nut Gift Tin", price: 43, img: "https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=400&q=80", cat: "snacks", featured: false },
 
       // Spices & Oil
-      { id: 53, name: "Napule Balsamic Vinegar", price: 58, img: "https://images.unsplash.com/photo-1604514628550-37477afdf4e3?w=400&q=80", cat: "spices", featured: false },
       { id: 54, name: "Assorted Spices 5-Pack", price: 43, img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80", cat: "spices", featured: false },
       { id: 55, name: "Truffle Salt & Pepper Set", price: 73, img: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=400&q=80", cat: "spices", featured: false }
     ];
@@ -1177,21 +1167,8 @@
     var featuredProducts = products.filter(function(p) { return p.featured; });
     document.getElementById('featured-grid').innerHTML = featuredProducts.map(createProductCard).join('');
 
-    // Founder's Curated Picks card (appended to each category)
-    var founderCard = { id: 99, name: "Founder's Curated Picks", price: 75, img: "about-bg.jpg", cat: "founders", featured: false };
-
-    // Group products by category and append founder card to each
-    var categories = ['gift-baskets', 'chocolate', 'candy', 'jerky', 'sauces', 'snacks', 'spices'];
-    var shopProducts = [];
-    categories.forEach(function(cat) {
-      var catProducts = products.filter(function(p) { return p.cat === cat; });
-      shopProducts = shopProducts.concat(catProducts);
-      // Add founder card tagged with this category
-      shopProducts.push({ id: 99, name: "Founder's Curated Picks", price: 75, img: "about-bg.jpg", cat: cat, featured: false });
-    });
-
     // Shop all
-    document.getElementById('shop-grid').innerHTML = shopProducts.map(createProductCard).join('');
+    document.getElementById('shop-grid').innerHTML = products.map(createProductCard).join('');
 
     // ── FILTERS ──
     var filterBtns = document.querySelectorAll('.filter-btn');
