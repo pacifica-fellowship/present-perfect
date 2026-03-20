@@ -578,11 +578,34 @@
       padding: 6rem 2rem;
       background: var(--bg-dark);
       color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('team-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .team::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26, 23, 20, 0.6) 0%, rgba(26, 23, 20, 0.8) 100%);
+      z-index: 0;
     }
 
     .team-inner {
       max-width: var(--max-w);
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
     .team .section-label { color: var(--accent-light); }
